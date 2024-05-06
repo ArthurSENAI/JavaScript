@@ -5,8 +5,10 @@ var numero = ddd.concat(" " + telefone);
 
 // Concatenado com ','
 console.log ("O Cliente", dono, "tem o seguinte numero de celular",ddd, telefone);
+
 // Concatenado com '+'
 console.log ("O Cliente "+ dono + " tem o seguinte numero de celular "+ numero);
+
 // Concatenado em variavel com '$'
 let texto = `O Cliente ${dono} tem o seguinte numero de celular ${ddd} ${telefone}`;
 console.log(texto);
