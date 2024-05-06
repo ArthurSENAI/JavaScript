@@ -46,3 +46,7 @@ var n = '29.23'
 console.log(typeof n, n)
 console.log(typeof parseFloat(n), parseFloat(n))
 
+// Não há como Converter string(TEXTO) em Number. O Resultado sera NaN(Not a Number)
+var n = 'hsfdjkbsadjkfbsdjk'
+console.log(typeof n, n)
+console.log(typeof Number(n), Number(n))
