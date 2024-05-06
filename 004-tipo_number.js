@@ -36,9 +36,13 @@ console.log(typeof number, number);
 var number = Number(new Date());
 console.log(typeof number, number);
 
-// Converter de string para numero usando o parseInt
-
-var n = '29.230421598321684'
+// Converter de string(TEXTO) para numero INTEIRO usando o parseInt
+var n = '29.23'
 console.log(typeof n, n)
 console.log(typeof parseInt(n), parseInt(n))
+
+// Converter de string(TEXTO) para numero REAL usando o parseFloat
+var n = '29.23'
+console.log(typeof n, n)
+console.log(typeof parseFloat(n), parseFloat(n))
 
