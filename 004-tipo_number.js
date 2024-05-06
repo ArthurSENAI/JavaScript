@@ -5,5 +5,5 @@
 */
 
 let idade = 29;
-console.log(typeof idade, idade);
+console.log(typeof idade, idade+1);
 
