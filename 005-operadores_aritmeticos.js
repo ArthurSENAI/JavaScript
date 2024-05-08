@@ -49,3 +49,43 @@ console.log("A multiplicação é: "+multipicacao)
 console.log("A multiplicação é:",v7*v8)
 console.log("A multiplicação é: "+parseInt(v7*v8))
 console.log("A multiplicação é: "+Number(v7*v8))
+
+// RestoDivisão
+let v9 = 10;
+let v10 = 5;
+let restodivisao = v9 % v10;
+console.log("O restodivisão é: " + restodivisao);
+console.log("O restodivisão é:", restodivisao);
+console.log("O restodivisão é: " + parseInt(restodivisao));
+console.log("O restodivisão é: " + Number(restodivisao));
+console.log("")
+
+// Incremento
+let v11 = 10;
+let v12 = 5;
+let incremento = v11 + v12;
+console.log("O incremento é: " + incremento);
+console.log("O incremento é:", incremento);
+console.log("O incremento é: " + parseInt(incremento));
+console.log("O incremento é: " + Number(incremento));
+console.log("");
+
+// Decremento
+let v13 = 10;
+let v14 = 5;
+let decremento = v13 - v14;
+console.log("O decremento é: " + decremento);
+console.log("O decremento é:", decremento);
+console.log("O decremento é: " + parseInt(decremento));
+console.log("O decremento é: " + Number(decremento));
+console.log("");
+
+// Exponenciamento
+let v15 = 10;
+let v16 = 5;
+let exponenciamento = v15 ** v16;
+console.log("O exponenciamento é: " + exponenciamento);
+console.log("O exponenciamento é:", exponenciamento);
+console.log("O exponenciamento é: " + parseInt(exponenciamento));
+console.log("O exponenciamento é: " + Number(exponenciamento));
+console.log("");
