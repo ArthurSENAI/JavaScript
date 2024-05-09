@@ -12,20 +12,20 @@ são indexados numericamente, começando do índice 0,
 let array1 = [1, 2, 3, 4, 5];
 
 // Usando o construtor Array()
-let array2 = new Array(1,2,3,4,5);
+let array2 = new Array(1, 2, 3, 4, 5);
 
 // Criando um array vazio []
 let array3 = [];
 
-// Acessando indece do Array
+// Array podem conter diferentes tipos de dados
 let array4 = ["Hello", 42, true];
 
-// Verificando o tamanho do array
+// Acessando indece do Array
 let array = [10, 20, 30, 40, 50];
 console.log(array[0])// Saida 10
 console.log(array[2])// Saida 30
 
-// 
+// Verificando o tamanho do array
 let arraylength = [1,2,3]
 console.log(arraylength.length); // Saida 3
 
