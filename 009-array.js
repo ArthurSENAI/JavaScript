@@ -20,7 +20,7 @@ let array3 = [];
 // Array podem conter diferentes tipos de dados
 let array4 = ["Hello", 42, true];
 
-// Acessando indece do Array
+// Acessando indice do Array
 let array = [10, 20, 30, 40, 50];
 console.log(array[0])// Saida 10
 console.log(array[2])// Saida 30
@@ -33,9 +33,15 @@ console.log(arraylength.length); // Saida 3
 arraylength.push(4)
 console.log(arraylength) // Saida [1, 2, 3, 4]
 
-// Removendo
+// Removendo um item no array
 let removedElement = arraylength.pop();
 console.log(removedElement)// Removendo o 4
 console.log(arraylength)
 
+// Removendo um item pelo index no array
+let array5 = [1, 2, 3, 4, 5];
+// array5.splice(index, deleteNumbers)
+array5.splice(2, 1)
+console.log(array5)// Saida: [1, 2, 4, 5]
+console.log(arraylength)
 
