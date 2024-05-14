@@ -135,4 +135,68 @@ class Aluno {
 const Aluno1 = new Aluno('Arthur', 123456, [10, 10, 8, 8])
 console.log(`A média do aluno ${Aluno1.nome} é ${Aluno1.calcularMedia()}`)
 
-//7.
+//7.Crie uma classe Animal com propriedades nome e tipo e um método para exibir uma mensagem com o nome e o tipo do animal.
+class Animal {
+    constructor(nome, tipo) {
+        this.nome = nome
+        this.tipo = tipo
+        }
+    exibir() {
+        console.log(`O animal ${this.nome} é do tipo ${this.tipo}`)
+        }
+}
+const Animal1 = new Animal('Cachorro', 'Mamífero')
+Animal1.exibir()
+
+//8.Crie uma classe Triangulo com propriedades lado1, lado2 e lado3 e métodos para calcular a área e o perímetro do triângulo.
+class Triangulo {
+    constructor(lado1, lado2, lado3) {
+        this.lado1 = lado1
+        this.lado2 = lado2
+        this.lado3 = lado3
+    }
+    calcularArea(){
+        let p = (this.lado1 + this.lado2 + this.lado3) / 2 
+        return Math.sqrt(p * (p - this.lado1) * (p - this.lado2) * (p - this.lado3))
+    }
+
+    calcularPerimetro(){
+        return this.lado1 + this.lado2 + this.lado3
+    }               
+}
+const Triangulo1 = new Triangulo(5, 6, 7)
+console.log(`A área do triângulo é ${Triangulo1.calcularArea()}`)
+console.log(`O perímetro do triângulo é ${Triangulo1.calcularPerimetro()}`)
+
+//9.Crie uma classe Livro com propriedades titulo, autor e ano e um método para exibir todas as informações do livro.
+class Livro {
+    constructor(titulo, autor, ano) {
+        this.titulo = titulo
+        this.autor = autor
+        this.ano = ano
+        }
+    
+    exibir(){
+        console.log(`O livro ${this.titulo} do autor ${this.autor} foi publicado em ${this.ano}`)
+    }
+}
+const Livro1 = new Carro('Eragon', 'Christopher Paolini', 2003)
+Livro1.exibir()
+
+//10.Crie uma classe Circulo com propriedade raio e métodos para calcular a área e o perímetro do círculo.
+class Circulo {
+    constructor(raio) {
+        this.raio = raio
+    }
+    calcularArea(){
+        return Math.PI * this.raio * this.raio
+    }
+
+    calcularPerimetro(){
+        return 2 * Math.PI * this.raio
+    }               
+}
+
+const Circulo1 = new Circulo(20)
+console.log(`A área do círculo é ${Circulo1.calcularArea()}`)
+console.log(`O perímetro do círculo é ${Circulo1.calcularPerimetro()}`)
