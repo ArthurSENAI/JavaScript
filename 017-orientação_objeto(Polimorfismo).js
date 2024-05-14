@@ -55,28 +55,28 @@ class Forma {
     renderizar() {
       console.log("Renderizando forma genérica...");
     }
-  }
+}
   
-  class Circulo extends Forma {
+class Circulo extends Forma {
     renderizar() {
       console.log("Renderizando círculo...");
     }
-  }
+}
   
-  class Retangulo extends Forma {
+class Retangulo extends Forma {
     renderizar() {
       console.log("Renderizando retângulo...");
     }
-  }
+}
   
-  function renderizarForma(forma) {
+function renderizarForma(forma) {
     forma.renderizar();
-  }
+}
   
-  // Exemplo de uso
-  const circulo = new Circulo();
-  const retangulo = new Retangulo();
+// Exemplo de uso
+const circulo = new Circulo();
+const retangulo = new Retangulo();
   
-  renderizarForma(circulo); // Saída: Renderizando círculo...
-  renderizarForma(retangulo); // Saída: Renderizando retângulo...
+renderizarForma(circulo); // Saída: Renderizando círculo...
+renderizarForma(retangulo); // Saída: Renderizando retângulo...
   
