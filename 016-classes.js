@@ -109,6 +109,8 @@ class MinhaClasse {
   
   const rtl2 = new Retangulo(5, 2)
   console.log("A area do retangulo e:",rtl2.area)
+
+  
   
   // Método estático
   class Utilidades {
