@@ -63,12 +63,7 @@ class MinhaClasse {
    Ele é usado no construtor para chamar o construtor da classe pai.
   */
   
-  class Cachorro1 extends Animal {
-    constructor(nome) {
-        super();
-        this.nome = nome;
-    }
-  }
+
   // Exemplo de uso
   const rex = new Cachorro("Rex", 3, "Golden Retriever");
   
@@ -77,7 +72,7 @@ class MinhaClasse {
   console.log("Idade:", rex.idade); // Saída: Idade: 3
   console.log("Raça:", rex.raca); // Saída: Raça: Golden Retriever
   
-  rex.nome = "TROVAO"
+  rex.nome = "Trovao"
   rex.idade = 10
   rex.raca = "Fila Brasileiro"
   
