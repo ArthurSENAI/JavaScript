@@ -134,3 +134,5 @@ class Aluno {
 }
 const Aluno1 = new Aluno('Arthur', 123456, [10, 10, 8, 8])
 console.log(`A média do aluno ${Aluno1.nome} é ${Aluno1.calcularMedia()}`)
+
+//7.
