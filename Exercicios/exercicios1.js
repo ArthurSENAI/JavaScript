@@ -19,3 +19,33 @@ Crie uma classe Livro com propriedades titulo, autor e ano e um método para exi
 
 Crie uma classe Circulo com propriedade raio e métodos para calcular a área e o perímetro do círculo.
 */
+
+//1.
+class Pessoa {
+    constructor(nome, idade){
+    this.nome = nome
+    this.idade = idade
+    }
+
+    apresentar(){
+        console.log(`Meu nome é ${this.nome} e tenho ${this.idade} anos`)
+    }
+
+}
+
+const Arthur = new Pessoa('Arthur', 29)
+console.log(Arthur.apresentar())
+
+//2.
+class Retangulo {
+    constructor(largura, altura) {
+        this.largura = largura
+        this.altura = altura
+        }
+    get area(){
+        return this.largura * this.altura
+    }
+    get perimetro(){
+        return (this.largura + this.altura) * 2
+    }
+}
