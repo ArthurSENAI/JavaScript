@@ -123,14 +123,14 @@ class Aluno {
         this.nome = nome
         this.matricula = matricula
         this.notas = notas
+    }
+    calcularMedia() {
+        let soma = 0
+        for (let i = 0; i < this.notas.length; i++) {
+            soma += this.notas[i]
         }
-        calcularMedia() {
-            let soma = 0
-            for (let i = 0; i < this.notas.length; i++) {
-                soma += this.notas[i]
-            }
-            return soma / this.notas.length
-        }
+        return soma / this.notas.length
+    }
 }
 const Aluno1 = new Aluno('Arthur', 123456, [10, 10, 8, 8])
 console.log(`A média do aluno ${Aluno1.nome} é ${Aluno1.calcularMedia()}`)
@@ -140,10 +140,10 @@ class Animal {
     constructor(nome, tipo) {
         this.nome = nome
         this.tipo = tipo
-        }
+    }
     exibir() {
         console.log(`O animal ${this.nome} é do tipo ${this.tipo}`)
-        }
+    }
 }
 const Animal1 = new Animal('Cachorro', 'Mamífero')
 Animal1.exibir()
@@ -174,7 +174,7 @@ class Livro {
         this.titulo = titulo
         this.autor = autor
         this.ano = ano
-        }
+    }
     
     exibir(){
         console.log(`O livro ${this.titulo} do autor ${this.autor} foi publicado em ${this.ano}`)
