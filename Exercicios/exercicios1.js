@@ -34,7 +34,7 @@ class Pessoa {
 }
 
 const Arthur = new Pessoa('Arthur', 29)
-console.log(Arthur.apresentar())
+Arthur.apresentar()
 
 //2.
 class Retangulo {
@@ -53,6 +53,25 @@ const retangulo = new Retangulo(10, 5)
 console.log(`A área do retângulo é ${retangulo.area} e o perímetro é ${retangulo.perimetro}`)
 
 //3.
+class ContaBancaria {
+    constructor(agencia, numero, saldo) {
+        this.agencia = agencia
+        this.numero = numero
+        this.saldo = saldo
+        }
+        get saldo() {
+            return this._saldo
+        }
+        set saldo(valor) {
+            if (valor < 0) {
+                throw new Error('Valor inválido')
+                }
+            this._saldo = valor
+        }
+}
+
+
+//4.
 class Produto {
     constructor(nome, preco, quantidade) {
         this.nome = nome
@@ -63,7 +82,5 @@ class Produto {
             return this.preco * this.quantidade
         }
 }
-const Celular = new Produto('Samsung S20', 1320.00, 10)
+const Celular = new Produto('Samsung S20', 1320.00, 1)
 console.log(`O total do produto ${Celular.nome} é ${Celular.total}`)
-
-//4.
