@@ -49,3 +49,5 @@ class Retangulo {
         return (this.largura + this.altura) * 2
     }
 }
+const retangulo = new Retangulo(10, 5)
+console.log(`A área do retângulo é ${retangulo.area} e o perímetro é ${retangulo.perimetro}`)
