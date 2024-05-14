@@ -51,3 +51,19 @@ class Retangulo {
 }
 const retangulo = new Retangulo(10, 5)
 console.log(`A área do retângulo é ${retangulo.area} e o perímetro é ${retangulo.perimetro}`)
+
+//3.
+class Produto {
+    constructor(nome, preco, quantidade) {
+        this.nome = nome
+        this.preco = preco
+        this.quantidade = quantidade
+        }
+        get total(){
+            return this.preco * this.quantidade
+        }
+}
+const Celular = new Produto('Samsung S20', 1320.00, 10)
+console.log(`O total do produto ${Celular.nome} é ${Celular.total}`)
+
+//4.
