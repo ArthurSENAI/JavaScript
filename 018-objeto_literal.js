@@ -1,5 +1,5 @@
 /*
-	Um objeto literal em JavaScript é uma coleção de pares de chave-valor, 
+Um objeto literal em JavaScript é uma coleção de pares de chave-valor, 
 onde chaves são strings (ou símbolos a partir do ES6) que representam 
 nomes de propriedades, e valores podem ser qualquer tipo de dado suportado
  por JavaScript (números, strings, booleanos, funções, outros objetos, etc.).
@@ -21,13 +21,13 @@ const pessoa = {
 console.log(pessoa.nome); // Saída: João
 console.log(pessoa['idade']); // Saída: 30
 
-pessoa.nome = "Arthur"
-pessoa.idade = 29
+pessoa.nome = "rodrigo"
+pessoa.idade = 42
 pessoa.casado = false
 console.log(pessoa.nome); 
 console.log(pessoa['idade']); 
 
-//DESCONSTRUTORES - Adição e Remoção de Propriedades:
+//DESCONTRUTORES - Adição e Remoção de Propriedades:
 pessoa.profissao = "Programador"; // Adicionando nova propriedade
 console.log("A profissão da pessoa e:", pessoa.profissao)
 delete pessoa.casado; // Removendo propriedade existente
@@ -42,6 +42,10 @@ const empresa = {
     fundadaEm: new Date(2000, 0, 1)
   };
 
+  console.log("Nome da empresa: ",empresa.nome); // Saída: ABC Corp
+  console.log("Seus funcionarios sao:", empresa.funcionarios); // Saída: [ { nome: 'Alice', cargo: 'Engenheira' }, { nome: 'Bob', cargo: 'Designer' } ]
+  console.log("foi fundada em :", empresa.fundadaEm); // Saída: Sat Jan 01 2000 00:00:00 GMT+0000 (Coordinated Universal Time)
+
 //Métodos em Objetos Literais:  
 const calculadora = {
     soma: function(a, b) {
@@ -51,9 +55,8 @@ const calculadora = {
       return a - b;
     }
   };
-
 //Iteração sobre Propriedades:
 for (let chave in pessoa) {
     console.log(chave + ': ' + pessoa[chave]);
-  };
+  }
   
