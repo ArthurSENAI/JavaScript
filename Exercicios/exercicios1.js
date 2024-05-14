@@ -81,7 +81,12 @@ class ContaBancaria {
         this.saldo = saldo - valor
         }
 }
- Conta = 
+const ContaArthur = new ContaBancaria ('1360-0','10.842', 10000)
+console.log('O seu saldo atual é: ' + ContaArthur.saldo)
+console.log('O seu saldo atual é: ' + ContaArthur.depositar(2000))
+console.log('O seu saldo atual é: ' + ContaArthur.saldo)
+console.log('O seu saldo atual é: ' + ContaArthur.sacar(1500))
+console.log('O seu saldo atual é: ' + ContaArthur.saldo)
 
 //4.
 class Produto {
