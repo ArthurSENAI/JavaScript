@@ -60,16 +60,28 @@ class ContaBancaria {
         this.saldo = saldo
         }
         get saldo() {
-            return this._saldo
+            return this.saldo
         }
         set saldo(valor) {
             if (valor < 0) {
                 throw new Error('Valor inválido')
                 }
-            this._saldo = valor
+            this.saldo = valor
+        }
+        set depositar(valor) {
+            if (valor < 0) {
+                throw new Error('Valor inválido')
+            }
+            this.saldo = saldo + valor
+        }
+        set sacar(valor) {
+            if (valor < 0) {
+                throw new Error('Valor inválido')
+            }
+        this.saldo = saldo - valor
         }
 }
-
+ Conta = 
 
 //4.
 class Produto {
