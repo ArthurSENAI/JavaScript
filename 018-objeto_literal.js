@@ -21,13 +21,13 @@ const pessoa = {
 console.log(pessoa.nome); // Saída: João
 console.log(pessoa['idade']); // Saída: 30
 
-pessoa.nome = "rodrigo"
-pessoa.idade = 42
+pessoa.nome = "Arthur"
+pessoa.idade = 29
 pessoa.casado = false
 console.log(pessoa.nome); 
 console.log(pessoa['idade']); 
 
-//DESCONTRUTORES - Adição e Remoção de Propriedades:
+//DESCONSTRUTORES - Adição e Remoção de Propriedades:
 pessoa.profissao = "Programador"; // Adicionando nova propriedade
 console.log("A profissão da pessoa e:", pessoa.profissao)
 delete pessoa.casado; // Removendo propriedade existente
@@ -43,6 +43,7 @@ const empresa = {
   };
 
   console.log("Nome da empresa: ",empresa.nome); // Saída: ABC Corp
+  console.log("Seus funcionarios sao:", empresa.funcionarios[0].nome); // nome: 'Alice'
   console.log("Seus funcionarios sao:", empresa.funcionarios); // Saída: [ { nome: 'Alice', cargo: 'Engenheira' }, { nome: 'Bob', cargo: 'Designer' } ]
   console.log("foi fundada em :", empresa.fundadaEm); // Saída: Sat Jan 01 2000 00:00:00 GMT+0000 (Coordinated Universal Time)
 
@@ -55,6 +56,8 @@ const calculadora = {
       return a - b;
     }
   };
+
+  console.log(calculadora.soma(3, 5)) // 3 + 5 = 8
 //Iteração sobre Propriedades:
 for (let chave in pessoa) {
     console.log(chave + ': ' + pessoa[chave]);
