@@ -100,9 +100,11 @@ var ListaCompras = {
     "Frango": 2,
     adicionarItem(item, quantidade) {
         this[item] = quantidade;
+        console.log(item + " adicionado a lista \n")
     },
     removerItem(item) {
         delete this[item];
+        console.log(item + " removido da lista \n")
     }
 }
 //Lista
@@ -111,6 +113,7 @@ for (let item in ListaCompras) {
         console.log(item + ": " + ListaCompras[item]);
     }
 }
+console.log("");
 
 //Adiciconar e Remover
 ListaCompras.adicionarItem("Sabonete", 10);
@@ -132,11 +135,12 @@ var ListaCompras = {
         this[item] = quantidade;
         this.valor += quantidade * preco
     },
-    removerItem(item) {
+    removerItem(item, preco) {
         delete this[item];
         this.valor -= this[item] * preco
     }
 }
+//Adicionando Itens Na lista
 ListaCompras.adicionarItem("Arroz", 2, 30.50);
 ListaCompras.adicionarItem("Feijão", 1, 15.20);
 ListaCompras.adicionarItem("Macarrão", 1, 3);
@@ -145,8 +149,24 @@ ListaCompras.adicionarItem("Papel Higienico", 1, 25.50);
 ListaCompras.adicionarItem("Detergente", 2, 3.2);
 ListaCompras.adicionarItem("Frango", 2, 10.99);
 
+//Lista com Valor Total: 
+console.log("Lista com Valor Total apos Adição: ");
 for (let item in ListaCompras) {
     if (typeof ListaCompras[item] !== 'function') {
         console.log(item + ": " + ListaCompras[item]);
     }
 }
+console.log("");
+
+//Removendo Itens na lista
+ListaCompras.removerItem("Detergente", 3.2);
+ListaCompras.removerItem("Frango", 10.99);
+
+//Lista com Valor Total: 
+console.log("Lista com Valor Total apos Remoção: ");
+for (let item in ListaCompras) {
+    if (typeof ListaCompras[item] !== 'function') {
+        console.log(item + ": " + ListaCompras[item]);
+    }
+}
+console.log("");
