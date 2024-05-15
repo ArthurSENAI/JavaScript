@@ -47,3 +47,61 @@ definidas no exercício anterior. Adicione métodos para
 adicionar um novo contato à lista, remover um contato
  existente e buscar um contato pelo nome.
 */
+
+//Exercício 1: Criação de Objeto Literal. Crie um objeto literal que represente um livro, com as propriedades titulo, autor e ano. 
+//Em seguida, imprima as informações do livro no console.
+var livro = {
+    titulo: "O Senhor dos Anéis",
+    autor: "J.R.R. Tolkien",
+    ano: 1954
+    };
+console.log(livro.titulo, livro.autor, livro.ano);
+console.log("")
+
+
+//Exercício 2: Adição de Método. Adicione um método informacoes() ao objeto livro que imprima todas as informações do livro, incluindo título, autor e ano.
+var livro = {
+    titulo: "O Senhor dos Anéis",
+    autor: "J.R.R. Tolkien",
+    ano: 1954,
+    informacoes() {
+        console.log("Título: " + this.titulo + ", Autor: " + this.autor + ", Ano: " + this.ano);
+    }
+}
+livro.informacoes();
+console.log("")
+
+//Exercício 3: Lista de Compras. Crie um objeto literal que represente uma lista de compras, onde cada item da lista é uma propriedade com o nome do item e a quantidade desejada.
+var ListaCompras = {
+    "Arroz": 2,
+    "Feijão": 1,
+    "Macarrão": 1,
+    "Oleo": 3,
+    "Papel Higienico": 1,
+    "Detergente": 2,
+    "Frango": 2
+    }
+console.log(ListaCompras);
+console.log("")
+
+//Exercício 4: Adição e Remoção de Itens. Adicione métodos ao objeto lista de compras para adicionar um novo item à lista e remover um item existente.
+var ListaCompras = {
+    "Arroz": 2,
+    "Feijão": 1,
+    "Macarrão": 1,
+    "Oleo": 3,
+    "Papel Higienico": 1,
+    "Detergente": 2,
+    "Frango": 2,
+    adicionarItem(item, quantidade) {
+        this[item] = quantidade;
+    },
+    removerItem(item) {
+        delete this[item];
+    }
+}
+console.log(ListaCompras);
+ListaCompras.adicionarItem("Sabonete", 10);
+console.log(ListaCompras);
+ListaCompras.removerItem("Macarrão");
+console.log("");
