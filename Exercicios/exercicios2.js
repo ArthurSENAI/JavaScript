@@ -54,7 +54,7 @@ var livro = {
     titulo: "O Senhor dos Anéis",
     autor: "J.R.R. Tolkien",
     ano: 1954
-    };
+};
 console.log(livro.titulo, livro.autor, livro.ano);
 console.log("")
 
@@ -86,7 +86,7 @@ for (let item in ListaCompras) {
     if (typeof ListaCompras[item] !== 'function') {
         console.log(item + ": " + ListaCompras[item]);
     }
-}   
+}
 console.log("")
 
 //Exercício 4: Adição e Remoção de Itens. Adicione métodos ao objeto lista de compras para adicionar um novo item à lista e remover um item existente.
@@ -108,6 +108,7 @@ var ListaCompras = {
     }
 }
 //Lista
+console.log("Lista de Compras: ");
 for (let item in ListaCompras) {
     if (typeof ListaCompras[item] !== 'function') {
         console.log(item + ": " + ListaCompras[item]);
@@ -120,6 +121,7 @@ ListaCompras.adicionarItem("Sabonete", 10);
 ListaCompras.removerItem("Macarrão");
 
 //Lista Apos
+console.log("Lista apos Modificação: ");
 for (let item in ListaCompras) {
     if (typeof ListaCompras[item] !== 'function') {
         console.log(item + ": " + ListaCompras[item]);
@@ -136,11 +138,11 @@ var ListaCompras = {
         this.valor += quantidade * preco
     },
     removerItem(item, preco) {
-        let quantidade = this[item]; // Capture a quantidade antes de deletar
+        this.valor -= this[item] * preco;
         delete this[item];
-        this.valor -= quantidade * preco;
     }
 }
+
 //Adicionando Itens Na lista
 ListaCompras.adicionarItem("Arroz", 2, 30.50);
 ListaCompras.adicionarItem("Feijão", 1, 15.20);
@@ -171,3 +173,130 @@ for (let item in ListaCompras) {
     }
 }
 console.log("");
+
+//Exercício 6: Registro de Funcionários. Crie um objeto literal que represente um registro de funcionários, 
+//onde cada funcionário é representado por um objeto com propriedades como nome, cargo e salário.
+var registroFuncionarios = {
+    funcionarios: [
+        {
+            nome: "Arthur",
+            cargo: "Data Science",
+            salario: 15000
+        },
+        {
+            nome: "Davi",
+            cargo: "DevOps",
+            salario: 10000
+        },
+        {
+            nome: "Tiago",
+            cargo: "BackEnd",
+            salario: 5000
+        },
+        {
+            nome: "Ruan",
+            cargo: "FrontEnd",
+            salario: 5000
+        }
+    ]
+};
+registroFuncionarios.funcionarios.forEach(funcionario => {
+    console.log(`Nome: ${funcionario.nome}, Cargo: ${funcionario.cargo}, Salário: ${funcionario.salario}`);
+});
+console.log("")
+
+//Exercício 7: Adição de Funcionários. Adicione métodos ao objeto registro de funcionários para adicionar um novo funcionário ao registro 
+//e remover um funcionário existente.
+var registroFuncionarios = {
+    funcionarios: [
+        {
+            nome: "Arthur",
+            cargo: "Data Science",
+            salario: 15000
+        },
+        {
+            nome: "Davi",
+            cargo: "DevOps",
+            salario: 10000
+        },
+        {
+            nome: "Tiago",
+            cargo: "BackEnd",
+            salario: 5000
+        },
+        {
+            nome: "Ruan",
+            cargo: "FrontEnd",
+            salario: 5000
+        }
+    ],
+    adicionarFuncionario: function (funcionario) {
+        this.funcionarios.push(funcionario);
+    },
+    removerFuncionario: function (nome) {
+        this.funcionarios = this.funcionarios.filter(funcionario => funcionario.nome !== nome);
+    }
+};
+
+// Exemplo de uso:
+registroFuncionarios.adicionarFuncionario({
+    nome: "João Silva",
+    cargo: "Desenvolvedor",
+    salario: 6000
+});
+
+console.log(registroFuncionarios.funcionarios);
+
+registroFuncionarios.removerFuncionario("Ruan");
+
+console.log(registroFuncionarios.funcionarios);
+console.log("")
+
+//Exercício 8: Aumento de Salário. Adicione um método ao objeto registro de funcionários para aumentar o salário de todos os funcionários em uma certa porcentagem.
+var registroFuncionarios = {
+    funcionarios: [
+        {
+            nome: "Arthur",
+            cargo: "Data Science",
+            salario: 15000
+        },
+        {
+            nome: "Davi",
+            cargo: "DevOps",
+            salario: 10000
+        },
+        {
+            nome: "Tiago",
+            cargo: "BackEnd",
+            salario: 5000
+        },
+        {
+            nome: "Ruan",
+            cargo: "FrontEnd",
+            salario: 5000
+        }
+    ],
+    adicionarFuncionario: function (funcionario) {
+        this.funcionarios.push(funcionario);
+    },
+    removerFuncionario: function (nome) {
+        this.funcionarios = this.funcionarios.filter(funcionario => funcionario.nome !== nome);
+    },
+    aumentarSalario: function (percentual) {
+        this.funcionarios.forEach(funcionario => funcionario.salario = funcionario.salario * (1 + percentual / 100));
+    }
+}
+registroFuncionarios.aumentarSalario(10);
+
+console.log(registroFuncionarios.funcionarios);
+
+//Exercício 9: Contato. Crie um objeto literal que represente um contato, com propriedades como nome, email e telefone.
+var contato = {
+    nome: "Arthur",
+    email: "arthur.s.araujo7@aluno.senai.br",
+    telefone: "61 91111-1111"
+    }
+console.log(contato);
+
+//Exercício 10: Lista de Contatos. Crie um array de objetos literais que representem uma lista de contatos. Cada objeto deve ter as mesmas propriedades 
+//definidas no exercício anterior. Adicione métodos para adicionar um novo contato à lista, remover um contato existente e buscar um contato pelo nome.
