@@ -244,11 +244,12 @@ registroFuncionarios.adicionarFuncionario({
     cargo: "Desenvolvedor",
     salario: 6000
 });
-
+console.log("Adicinando João: ")
 console.log(registroFuncionarios.funcionarios);
 
 registroFuncionarios.removerFuncionario("Ruan");
 
+console.log("Remoção Ruan: ")
 console.log(registroFuncionarios.funcionarios);
 console.log("")
 
@@ -280,23 +281,88 @@ var registroFuncionarios = {
         this.funcionarios.push(funcionario);
     },
     removerFuncionario: function (nome) {
-        this.funcionarios = this.funcionarios.filter(funcionario => funcionario.nome !== nome);
+        this.funcionarios = this.funcionarios.filter(funcionario => funcionario.nome!== nome);
     },
     aumentarSalario: function (percentual) {
         this.funcionarios.forEach(funcionario => funcionario.salario = funcionario.salario * (1 + percentual / 100));
     }
 }
+
+// Aumentando o salário dos funcionários em 10%
 registroFuncionarios.aumentarSalario(10);
 
+console.log("Funcionários após aumento de 10%: ");
 console.log(registroFuncionarios.funcionarios);
 
 //Exercício 9: Contato. Crie um objeto literal que represente um contato, com propriedades como nome, email e telefone.
-var contato = {
-    nome: "Arthur",
-    email: "arthur.s.araujo7@aluno.senai.br",
-    telefone: "61 91111-1111"
+var contatos = [
+    {
+        nome: "Arthur",
+        email: "arthur.s.araujo7@aluno.senai.br",
+        telefone: "61 91111-1111"
     }
-console.log(contato);
+]
+
+console.log("Seu contato é: ");
+console.log(contatos[0]);
 
 //Exercício 10: Lista de Contatos. Crie um array de objetos literais que representem uma lista de contatos. Cada objeto deve ter as mesmas propriedades 
 //definidas no exercício anterior. Adicione métodos para adicionar um novo contato à lista, remover um contato existente e buscar um contato pelo nome.
+
+var listaContatos = {
+    contatos: [
+        {
+            nome: "Arthur",
+            email: "arthur.s.araujo7@aluno.senai.br",
+            telefone: "61 91111-1611"
+        },
+        {
+            nome: "Tiago",
+            email: "tiago.silva@aluno.senai.br",
+            telefone: "61 91111-1151"
+        },
+        {
+            nome: "Ruan",
+            email: "ruan.silva@aluno.senai.br",
+            telefone: "61 91111-1111"
+        },
+        {
+            nome: "Davi",
+            email: "davi.giani@aluno.senai.br",
+            telefone: "61 98888-8888"
+        }
+    ],
+        // Função para adicionar um novo contato à lista
+    adicionarContato: function(contato) {
+            this.contatos.push(contato);
+    },
+    // Função para remover um contato da lista pelo nome
+    removerContato: function(nome) {
+        this.contatos = this.contatos.filter(contato => contato.nome!== nome);
+    },
+    // Função para buscar um contato na lista pelo nome
+    buscarContato: function(nome) {
+        return this.contatos.find(contato => contato.nome === nome);
+    }
+}
+    
+    
+    // Adicionando um novo contato
+    listaContatos.adicionarContato({
+        nome: "Marcos",
+        email: "marcos.silva@aluno.senai.br",
+        telefone: "61 98102-5556"
+    });
+    
+    console.log("\nAdicionando um novo contato: ")
+    console.log(listaContatos.contatos);
+    
+    // Removendo um contato
+    listaContatos.removerContato("Ruan");
+    
+    console.log("\nRemovendo um contato: ")
+    console.log(listaContatos.contatos);
+    
+    // Buscando um contato pelo nome
+    console.log("\nBuscando um contato pelo nome: ")
+    console.log(listaContatos.buscarContato("Marcos"));
