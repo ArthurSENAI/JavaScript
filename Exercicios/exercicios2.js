@@ -136,8 +136,9 @@ var ListaCompras = {
         this.valor += quantidade * preco
     },
     removerItem(item, preco) {
+        let quantidade = this[item]; // Capture a quantidade antes de deletar
         delete this[item];
-        this.valor -= this[item] * preco
+        this.valor -= quantidade * preco;
     }
 }
 //Adicionando Itens Na lista
