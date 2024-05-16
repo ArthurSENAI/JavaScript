@@ -23,7 +23,7 @@ function Pessoa1(nome, idade, estado_civil) {
 }
 
 
-let pessoa2 = new Pessoa1("Rodrigo, 38, solteiro");
+let pessoa2 = new Pessoa1("Rodrigo", 38, "solteiro");
 
 
 
